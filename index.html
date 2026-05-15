@@ -1,0 +1,1546 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>광성당 | SINCE 1969 — 금·은·시계·안경·보청기 전문점</title>
+<meta name="description" content="광주 송정동, 50년이 넘는 시간을 한자리에서. 광성당은 믿음과 정직을 바탕으로 금·은·주얼리, 고급 시계, 안경, 보청기를 한 곳에서 제공하는 종합 전문점입니다. 광주송정역 인근." />
+<meta property="og:title" content="광성당 | SINCE 1969" />
+<meta property="og:description" content="한자리에서 50년이 넘는 믿을 수 있는 광성당" />
+<meta property="og:type" content="website" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&family=Noto+Serif+KR:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
+<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" rel="stylesheet" />
+
+<style>
+  :root {
+    --bg: #f6f0e6;
+    --bg-soft: #efe5d1;
+    --bg-deep: #e8dcc2;
+    --paper: #fffdf7;
+    --ink: #1f1a17;
+    --ink-soft: #4a3f30;
+    --ink-muted: #7b6e58;
+    --gold: #b08a3c;
+    --gold-deep: #8a6a2c;
+    --gold-bright: #c9a258;
+    --line: #d9cdb1;
+    --line-soft: #e8dec6;
+    --shadow-sm: 0 1px 2px rgba(60, 40, 10, 0.06);
+    --shadow-md: 0 10px 30px -10px rgba(60, 40, 10, 0.18);
+    --shadow-lg: 0 25px 60px -20px rgba(60, 40, 10, 0.28);
+    --font-display: 'Nanum Myeongjo', 'Noto Serif KR', serif;
+    --font-serif: 'Noto Serif KR', 'Nanum Myeongjo', serif;
+    --font-body: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', sans-serif;
+    --font-latin: 'Cormorant Garamond', 'Nanum Myeongjo', serif;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; scroll-padding-top: 78px; }
+
+  body {
+    font-family: var(--font-body);
+    color: var(--ink);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+    word-break: keep-all;
+  }
+
+  img { display: block; max-width: 100%; height: auto; }
+
+  a { color: inherit; text-decoration: none; }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 32px;
+  }
+
+  /* ============ NAVIGATION ============ */
+  .nav {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: rgba(250, 245, 236, 0.92);
+    backdrop-filter: saturate(140%) blur(12px);
+    -webkit-backdrop-filter: saturate(140%) blur(12px);
+    border-bottom: 1px solid var(--line-soft);
+  }
+  .nav-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 32px;
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+  .logo {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 24px;
+    letter-spacing: 0.16em;
+    color: var(--ink);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    line-height: 1;
+  }
+  .logo-img {
+    height: 42px;
+    width: auto;
+    display: block;
+  }
+  .logo-text {
+    transform: translateY(1px);
+  }
+  .nav-links {
+    display: flex;
+    gap: 36px;
+    list-style: none;
+    align-items: center;
+  }
+  .nav-links a {
+    font-family: var(--font-serif);
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--ink-soft);
+    position: relative;
+    transition: color 0.2s ease;
+  }
+  .nav-links a:hover { color: var(--gold-deep); }
+  .nav-links a::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -6px;
+    width: 0;
+    height: 1px;
+    background: var(--gold);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+  }
+  .nav-links a:hover::after { width: 100%; }
+
+  .btn-consult {
+    background: var(--gold-deep);
+    color: var(--paper);
+    padding: 11px 22px;
+    border-radius: 4px;
+    font-family: var(--font-serif);
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 0.04em;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border: 1px solid var(--gold-deep);
+    transition: all 0.25s ease;
+    cursor: pointer;
+  }
+  .btn-consult:hover {
+    background: #533c14;
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-md);
+  }
+  .btn-consult::before {
+    content: '';
+    width: 14px;
+    height: 14px;
+    background: currentColor;
+    -webkit-mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='currentColor'><path d='M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z'/></svg>") no-repeat center / contain;
+    mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='currentColor'><path d='M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z'/></svg>") no-repeat center / contain;
+  }
+
+  .hamburger { display: none; background: none; border: 0; cursor: pointer; padding: 8px; }
+  .hamburger span { display: block; width: 22px; height: 1.5px; background: var(--ink); margin: 5px 0; transition: 0.3s; }
+
+  /* ============ HERO ============ */
+  .hero {
+    padding: 64px 0 80px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -100px;
+    right: -200px;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(176, 138, 68, 0.08), transparent 70%);
+    z-index: 0;
+    pointer-events: none;
+  }
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1.05fr 1.4fr;
+    gap: 60px;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+  }
+  .hero-eyebrow {
+    font-family: var(--font-latin);
+    font-style: italic;
+    font-size: 22px;
+    color: var(--gold);
+    letter-spacing: 0.32em;
+    margin-bottom: 24px;
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .hero-eyebrow::before {
+    content: '';
+    display: inline-block;
+    width: 40px;
+    height: 1px;
+    background: var(--gold);
+  }
+  .hero h1 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: clamp(36px, 5vw, 58px);
+    line-height: 1.25;
+    color: var(--ink);
+    margin-bottom: 28px;
+    letter-spacing: -0.01em;
+  }
+  .hero h1 .em {
+    color: var(--gold-deep);
+    font-weight: 800;
+  }
+  .hero-sub {
+    font-family: var(--font-serif);
+    color: var(--ink-soft);
+    font-size: 17px;
+    line-height: 1.85;
+    margin-bottom: 36px;
+    max-width: 460px;
+  }
+  .hero-ctas { display: flex; gap: 14px; margin-bottom: 56px; flex-wrap: wrap; }
+  .btn {
+    padding: 14px 28px;
+    font-family: var(--font-serif);
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 4px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    border: 1px solid transparent;
+  }
+  .btn-primary {
+    background: var(--gold-deep);
+    color: var(--paper);
+    border-color: var(--gold-deep);
+  }
+  .btn-primary:hover {
+    background: #4d3812;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+  }
+  .btn-secondary {
+    background: transparent;
+    color: var(--ink);
+    border-color: var(--line);
+  }
+  .btn-secondary:hover {
+    border-color: var(--gold);
+    color: var(--gold-deep);
+    background: var(--paper);
+  }
+  .btn-arrow {
+    width: 16px;
+    height: 1.5px;
+    background: currentColor;
+    position: relative;
+    transition: transform 0.25s ease;
+  }
+  .btn-arrow::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: -3px;
+    width: 7px;
+    height: 7px;
+    border-top: 1.5px solid currentColor;
+    border-right: 1.5px solid currentColor;
+    transform: rotate(45deg);
+  }
+  .btn:hover .btn-arrow { transform: translateX(4px); }
+
+  .hero-image-wrap {
+    position: relative;
+  }
+  .hero-image-wrap::before {
+    content: '';
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    right: -16px;
+    bottom: -16px;
+    background: var(--bg-deep);
+    border-radius: 4px;
+    z-index: 0;
+  }
+  .hero-image {
+    position: relative;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+    z-index: 1;
+  }
+  .hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    aspect-ratio: 4 / 3;
+  }
+  .hero-badge {
+    position: absolute;
+    bottom: -30px;
+    left: -30px;
+    background: var(--paper);
+    border: 1px solid var(--line);
+    padding: 20px 28px;
+    box-shadow: var(--shadow-md);
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+  }
+  .hero-badge .num {
+    font-family: var(--font-display);
+    font-size: 44px;
+    font-weight: 800;
+    color: var(--gold-deep);
+    line-height: 1;
+  }
+  .hero-badge .label {
+    font-family: var(--font-serif);
+    font-size: 13px;
+    color: var(--ink-muted);
+    letter-spacing: 0.08em;
+  }
+  .hero-badge .label strong {
+    display: block;
+    color: var(--ink);
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 2px;
+  }
+
+  /* ============ TRUST BADGES STRIP ============ */
+  .trust-strip {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    margin-top: 40px;
+    border-top: 1px solid var(--line-soft);
+    border-bottom: 1px solid var(--line-soft);
+  }
+  .trust-item {
+    padding: 32px 24px;
+    text-align: center;
+    border-right: 1px solid var(--line-soft);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    transition: background 0.25s ease;
+  }
+  .trust-item:last-child { border-right: 0; }
+  .trust-item:hover { background: var(--bg-soft); }
+  .trust-icon {
+    width: 44px;
+    height: 44px;
+    color: var(--gold);
+  }
+  .trust-label {
+    font-family: var(--font-display);
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--ink);
+    letter-spacing: 0.05em;
+  }
+
+  /* ============ SECTION HEADER ============ */
+  .section { padding: 100px 0; }
+  .section-soft { background: var(--bg-soft); }
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 64px;
+  }
+  .section-eyebrow {
+    font-family: var(--font-latin);
+    font-style: italic;
+    font-size: 17px;
+    color: var(--gold);
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+    display: inline-block;
+  }
+  .section-title {
+    font-family: var(--font-display);
+    font-size: clamp(28px, 3.4vw, 42px);
+    font-weight: 700;
+    color: var(--ink);
+    line-height: 1.3;
+    letter-spacing: -0.01em;
+  }
+  .section-title .accent {
+    color: var(--gold-deep);
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-style: normal;
+  }
+  .section-divider {
+    width: 40px;
+    height: 1px;
+    background: var(--gold);
+    margin: 22px auto 0;
+  }
+
+  /* ============ WHY US ============ */
+  .why-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 28px;
+  }
+  .why-card {
+    background: var(--paper);
+    border: 1px solid var(--line-soft);
+    padding: 40px 28px 36px;
+    text-align: center;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    position: relative;
+  }
+  .why-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--gold);
+  }
+  .why-icon {
+    width: 56px;
+    height: 56px;
+    margin: 0 auto 24px;
+    color: var(--gold);
+  }
+  .why-card h3 {
+    font-family: var(--font-display);
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--ink);
+    margin-bottom: 14px;
+    letter-spacing: 0.02em;
+  }
+  .why-card p {
+    font-family: var(--font-serif);
+    font-size: 14px;
+    color: var(--ink-muted);
+    line-height: 1.75;
+  }
+
+  /* ============ SERVICES ============ */
+  .services-grid {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr 1fr;
+    gap: 20px;
+  }
+  .service-card {
+    background: var(--paper);
+    border-radius: 4px;
+    overflow: hidden;
+    border: 1px solid var(--line-soft);
+    transition: all 0.35s ease;
+    position: relative;
+  }
+  .service-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+  }
+  .service-card.feature {
+    grid-row: span 1;
+    background: linear-gradient(160deg, #2a2018 0%, #3a2d1f 100%);
+    color: var(--paper);
+    border-color: #3a2d1f;
+    padding: 30px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 260px;
+  }
+  .service-card.feature h3 {
+    font-family: var(--font-display);
+    font-size: 26px;
+    color: var(--paper);
+    margin-bottom: 14px;
+    letter-spacing: 0.02em;
+  }
+  .service-card.feature p {
+    font-family: var(--font-serif);
+    color: rgba(255, 253, 247, 0.7);
+    line-height: 1.7;
+    font-size: 14px;
+  }
+  .service-card.feature .feature-decor {
+    width: 52px;
+    height: 52px;
+    color: var(--gold-bright);
+    margin-bottom: 18px;
+  }
+  .service-visual {
+    height: 130px;
+    background: var(--bg-deep);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+  }
+  .service-visual svg {
+    width: 70px;
+    height: 70px;
+    color: var(--gold);
+  }
+  .service-body {
+    padding: 22px 24px 26px;
+    text-align: center;
+  }
+  .service-body h3 {
+    font-family: var(--font-display);
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--ink);
+    margin-bottom: 8px;
+  }
+  .service-body p {
+    font-family: var(--font-serif);
+    font-size: 13px;
+    color: var(--ink-muted);
+    line-height: 1.65;
+  }
+
+  /* ============ FOUNDERS / SCALE ============ */
+  .founders {
+    padding: 110px 0;
+    background: linear-gradient(180deg, var(--bg) 0%, var(--bg-deep) 100%);
+    position: relative;
+    overflow: hidden;
+  }
+  .founders::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -100px;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(176, 138, 68, 0.1), transparent 70%);
+    transform: translateY(-50%);
+  }
+  .founders-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+  }
+  .founders-text h2 {
+    font-family: var(--font-display);
+    font-size: clamp(32px, 3.8vw, 46px);
+    font-weight: 700;
+    color: var(--ink);
+    line-height: 1.3;
+    margin-bottom: 28px;
+  }
+  .founders-text h2 .em {
+    color: var(--gold-deep);
+    font-style: italic;
+    font-family: var(--font-latin);
+    font-weight: 500;
+  }
+  .founders-text > p {
+    font-family: var(--font-serif);
+    font-size: 16px;
+    color: var(--ink-soft);
+    line-height: 1.9;
+    margin-bottom: 36px;
+  }
+  .founders-features {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  .founders-features li {
+    text-align: left;
+  }
+  .founders-features .ff-num {
+    font-family: var(--font-latin);
+    font-style: italic;
+    font-size: 22px;
+    color: var(--gold);
+    font-weight: 500;
+    margin-bottom: 8px;
+    display: block;
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 8px;
+    margin-right: 14px;
+  }
+  .founders-features strong {
+    font-family: var(--font-display);
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--ink);
+    display: block;
+    margin-bottom: 6px;
+  }
+  .founders-features p {
+    font-family: var(--font-serif);
+    font-size: 13px;
+    color: var(--ink-muted);
+    line-height: 1.6;
+  }
+  .founders-image-wrap {
+    position: relative;
+  }
+  .founders-image-wrap::before {
+    content: '';
+    position: absolute;
+    inset: -20px;
+    border: 1px solid var(--gold);
+    border-radius: 4px;
+    pointer-events: none;
+  }
+  .founders-image {
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+    aspect-ratio: 3 / 4;
+  }
+  .founders-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* ============ QUOTE ============ */
+  .quote {
+    padding: 100px 0;
+    text-align: center;
+    background: var(--paper);
+    position: relative;
+  }
+  .quote-mark {
+    font-family: var(--font-latin);
+    font-size: 120px;
+    color: var(--gold);
+    line-height: 0.8;
+    opacity: 0.4;
+    margin-bottom: -20px;
+  }
+  .quote blockquote {
+    font-family: var(--font-display);
+    font-size: clamp(24px, 3vw, 38px);
+    font-weight: 400;
+    color: var(--ink);
+    line-height: 1.5;
+    max-width: 760px;
+    margin: 0 auto 36px;
+    letter-spacing: -0.005em;
+  }
+  .quote blockquote .em { color: var(--gold-deep); font-weight: 700; }
+  .quote-attribution {
+    font-family: var(--font-serif);
+    font-size: 14px;
+    color: var(--ink-muted);
+    letter-spacing: 0.1em;
+    line-height: 1.8;
+  }
+  .quote-attribution::before {
+    content: '';
+    display: block;
+    width: 30px;
+    height: 1px;
+    background: var(--gold);
+    margin: 0 auto 16px;
+  }
+
+  /* ============ CTA BANNER ============ */
+  .cta-banner {
+    background: linear-gradient(135deg, #2a2018 0%, #463420 100%);
+    color: var(--paper);
+    padding: 80px 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .cta-banner::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -10%;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(176, 138, 68, 0.18), transparent 70%);
+    pointer-events: none;
+  }
+  .cta-banner h2 {
+    font-family: var(--font-display);
+    font-size: clamp(28px, 3.5vw, 40px);
+    font-weight: 700;
+    margin-bottom: 20px;
+    position: relative;
+  }
+  .cta-banner p {
+    font-family: var(--font-serif);
+    color: rgba(255, 253, 247, 0.78);
+    font-size: 17px;
+    margin-bottom: 36px;
+    position: relative;
+  }
+  .cta-banner .btn-primary {
+    background: var(--gold-bright);
+    border-color: var(--gold-bright);
+    color: var(--ink);
+    position: relative;
+  }
+  .cta-banner .btn-primary:hover {
+    background: #c69853;
+    border-color: #c69853;
+  }
+
+  /* ============ FOOTER ============ */
+  footer {
+    background: #1c1610;
+    color: rgba(255, 253, 247, 0.7);
+    padding: 70px 0 30px;
+    font-family: var(--font-serif);
+  }
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr 1fr 1.2fr;
+    gap: 48px;
+    margin-bottom: 50px;
+  }
+  .footer-lockup {
+    margin-bottom: 22px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .footer-logo-mark {
+    height: 68px;
+    width: auto;
+    display: block;
+    margin-bottom: 10px;
+    margin-left: -6px;
+  }
+  .footer-wordmark {
+    font-family: var(--font-display);
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--paper);
+    letter-spacing: 0.18em;
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+  .footer-tagline {
+    font-family: var(--font-latin);
+    font-size: 13px;
+    color: var(--gold-bright);
+    letter-spacing: 0.22em;
+    font-weight: 500;
+  }
+  .footer-brand p {
+    font-size: 13px;
+    line-height: 1.8;
+    color: rgba(255, 253, 247, 0.55);
+  }
+  .footer-brand .brand-concept {
+    font-family: var(--font-display);
+    font-size: 14px;
+    line-height: 1.85;
+    color: rgba(255, 253, 247, 0.72);
+    font-style: normal;
+  }
+  .footer-col h4 {
+    font-family: var(--font-display);
+    font-size: 14px;
+    color: var(--paper);
+    margin-bottom: 18px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+  }
+  .footer-col ul { list-style: none; }
+  .footer-col li {
+    margin-bottom: 10px;
+    font-size: 13.5px;
+    color: rgba(255, 253, 247, 0.7);
+    line-height: 1.6;
+  }
+  .footer-col a:hover { color: var(--gold-bright); }
+  .footer-contact .contact-row {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    margin-bottom: 14px;
+    font-size: 13.5px;
+    color: rgba(255, 253, 247, 0.78);
+    line-height: 1.6;
+  }
+  .footer-contact svg {
+    flex-shrink: 0;
+    width: 16px;
+    height: 16px;
+    margin-top: 3px;
+    color: var(--gold-bright);
+  }
+  .footer-bottom {
+    border-top: 1px solid rgba(255, 253, 247, 0.1);
+    padding-top: 24px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+    font-size: 12px;
+    color: rgba(255, 253, 247, 0.45);
+  }
+  .footer-bottom-links { display: flex; gap: 24px; }
+
+  /* ============ MAP PLACEHOLDER ============ */
+  .map-block {
+    margin-top: 14px;
+    background: rgba(255, 253, 247, 0.05);
+    border: 1px solid rgba(255, 253, 247, 0.12);
+    border-radius: 4px;
+    padding: 16px;
+    font-size: 12.5px;
+    line-height: 1.7;
+    color: rgba(255, 253, 247, 0.65);
+  }
+
+  /* ============ VISIT / FIND US ============ */
+  .visit-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 60px;
+    align-items: center;
+  }
+  .visit-lede {
+    font-family: var(--font-serif);
+    font-size: 17px;
+    line-height: 1.9;
+    color: var(--ink-soft);
+    margin-bottom: 32px;
+    padding-left: 18px;
+    border-left: 2px solid var(--gold);
+  }
+  .visit-address {
+    background: var(--paper);
+    border: 1px solid var(--line);
+    padding: 26px 28px;
+    border-radius: 4px;
+    margin-bottom: 24px;
+    box-shadow: var(--shadow-sm);
+  }
+  .va-label {
+    font-family: var(--font-latin);
+    font-style: italic;
+    font-size: 13px;
+    color: var(--gold);
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .va-value {
+    font-family: var(--font-display);
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--ink);
+    margin-bottom: 12px;
+    letter-spacing: 0.01em;
+  }
+  .va-phone {
+    font-family: var(--font-display);
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--gold-deep);
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .va-phone svg { width: 18px; height: 18px; }
+  .va-hint {
+    font-family: var(--font-serif);
+    font-size: 13px;
+    color: var(--ink-muted);
+    line-height: 1.65;
+    padding-top: 14px;
+    border-top: 1px dashed var(--line);
+  }
+  .va-hint strong { color: var(--ink); font-weight: 700; }
+  .visit-map-buttons {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  .map-btn {
+    flex: 1 1 auto;
+    padding: 12px 18px;
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    font-family: var(--font-serif);
+    font-size: 14px;
+    color: var(--ink);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: all 0.25s ease;
+    text-align: center;
+  }
+  .map-btn:hover {
+    border-color: var(--gold);
+    color: var(--gold-deep);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-sm);
+  }
+
+  .visit-features {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  .vf-item {
+    background: var(--paper);
+    border: 1px solid var(--line-soft);
+    border-radius: 4px;
+    padding: 22px 26px;
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    transition: all 0.3s ease;
+  }
+  .vf-item:hover {
+    border-color: var(--gold);
+    transform: translateX(4px);
+    box-shadow: var(--shadow-sm);
+  }
+  .vf-icon {
+    flex-shrink: 0;
+    width: 50px;
+    height: 50px;
+    background: var(--bg-soft);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--gold-deep);
+  }
+  .vf-icon svg { width: 26px; height: 26px; }
+  .vf-text strong {
+    font-family: var(--font-display);
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--ink);
+    display: block;
+    margin-bottom: 4px;
+    letter-spacing: 0.02em;
+  }
+  .vf-text p {
+    font-family: var(--font-serif);
+    font-size: 13.5px;
+    color: var(--ink-muted);
+    line-height: 1.6;
+  }
+
+  .map-block .mb-title {
+    font-family: var(--font-display);
+    font-size: 13px;
+    color: var(--gold-bright);
+    letter-spacing: 0.12em;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  .map-block ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .map-block li {
+    font-size: 12.5px;
+    line-height: 1.9;
+    color: rgba(255, 253, 247, 0.7);
+    padding-left: 14px;
+    position: relative;
+  }
+  .map-block li::before {
+    content: '·';
+    position: absolute;
+    left: 0;
+    color: var(--gold-bright);
+    font-weight: 700;
+  }
+
+  /* ============ ANIMATIONS ============ */
+  .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.9s ease, transform 0.9s ease;
+  }
+  .reveal.in {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* ============ RESPONSIVE ============ */
+  @media (max-width: 980px) {
+    .nav-links { display: none; }
+    .hamburger { display: block; }
+    .hero-grid { grid-template-columns: 1fr; gap: 50px; }
+    .hero-image-wrap { order: -1; }
+    .hero-badge { left: 0; bottom: -22px; padding: 16px 22px; }
+    .hero-badge .num { font-size: 36px; }
+    .trust-strip { grid-template-columns: repeat(2, 1fr); }
+    .trust-item:nth-child(2) { border-right: 0; }
+    .trust-item:nth-child(1), .trust-item:nth-child(2) { border-bottom: 1px solid var(--line-soft); }
+    .why-grid { grid-template-columns: repeat(2, 1fr); }
+    .services-grid { grid-template-columns: 1fr 1fr; }
+    .service-card.feature { grid-column: span 2; min-height: 200px; }
+    .founders-grid { grid-template-columns: 1fr; gap: 50px; }
+    .founders-image-wrap { max-width: 480px; margin: 0 auto; }
+    .footer-grid { grid-template-columns: 1fr 1fr; gap: 36px; }
+    .visit-grid { grid-template-columns: 1fr; gap: 40px; }
+  }
+  @media (max-width: 560px) {
+    .container { padding: 0 22px; }
+    .nav-inner { padding: 14px 22px; }
+    .logo { font-size: 22px; }
+    .hero { padding: 40px 0 60px; }
+    .hero-ctas .btn { padding: 12px 20px; font-size: 14px; }
+    .section { padding: 70px 0; }
+    .section-header { margin-bottom: 44px; }
+    .why-grid { grid-template-columns: 1fr; gap: 18px; }
+    .services-grid { grid-template-columns: 1fr; }
+    .service-card.feature { grid-column: span 1; }
+    .founders { padding: 70px 0; }
+    .founders-features { grid-template-columns: 1fr; }
+    .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+    .footer-bottom { flex-direction: column; align-items: flex-start; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ NAVIGATION ============ -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="#" class="logo">
+      <img src="assets/logo-mark.png" alt="" class="logo-img" />
+      <span class="logo-text">광 성 당</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#jewelry">금제품 · 주얼리</a></li>
+      <li><a href="#watch">고급 시계</a></li>
+      <li><a href="#optics">안경</a></li>
+      <li><a href="#hearing">보청기</a></li>
+      <li><a href="#brand">브랜드 소개</a></li>
+      <li><a href="#visit">오시는 길</a></li>
+    </ul>
+    <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <div class="hero-text reveal">
+        <div class="hero-eyebrow">Since 1969</div>
+        <h1>
+          한자리에서<br />
+          <span class="em">50년이 넘는</span><br />
+          믿을 수 있는 광성당
+        </h1>
+        <p class="hero-sub">
+          믿음과 정직을 바탕으로,<br />
+          다양한 매물을 직접 보고 선택할 수 있는<br />
+          광주 송정동의 종합 전문점입니다.
+        </p>
+        <div class="hero-ctas">
+          <a href="#services" class="btn btn-primary">매장 둘러보기 <span class="btn-arrow"></span></a>
+          <a href="#consult" class="btn btn-secondary">문의하기</a>
+        </div>
+      </div>
+
+      <div class="hero-image-wrap reveal">
+        <div class="hero-image">
+          <img src="assets/storefront.jpg" alt="광주 송정동 광성당 매장 외관" />
+        </div>
+        <div class="hero-badge">
+          <div class="num">50<sup style="font-size:18px;">+</sup></div>
+          <div class="label">
+            <strong>YEARS</strong>
+            한자리에서 이어온
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Trust Strip -->
+    <div class="trust-strip reveal">
+      <div class="trust-item">
+        <svg class="trust-icon" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M32 6 L40 24 L58 26 L44 40 L48 58 L32 48 L16 58 L20 40 L6 26 L24 24 Z" stroke-linejoin="round"/>
+          <text x="32" y="38" text-anchor="middle" font-family="serif" font-size="13" font-weight="700" fill="currentColor" stroke="none">50+</text>
+        </svg>
+        <span class="trust-label">50년 이상의 역사</span>
+      </div>
+      <div class="trust-item">
+        <svg class="trust-icon" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M14 34 L22 28 L30 32 L40 26 L50 32" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M12 38 L24 30 L34 34 L46 28 L52 36" stroke-linecap="round" stroke-linejoin="round" opacity="0.6"/>
+          <circle cx="32" cy="32" r="20" stroke-dasharray="2 4"/>
+        </svg>
+        <span class="trust-label">믿 음</span>
+      </div>
+      <div class="trust-item">
+        <svg class="trust-icon" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5">
+          <line x1="32" y1="10" x2="32" y2="22" stroke-linecap="round"/>
+          <line x1="16" y1="22" x2="48" y2="22" stroke-linecap="round"/>
+          <path d="M16 22 L10 38 M16 22 L22 38" stroke-linecap="round"/>
+          <path d="M48 22 L42 38 M48 22 L54 38" stroke-linecap="round"/>
+          <ellipse cx="16" cy="40" rx="9" ry="2"/>
+          <ellipse cx="48" cy="40" rx="9" ry="2"/>
+          <line x1="32" y1="22" x2="32" y2="50" stroke-linecap="round"/>
+          <path d="M24 54 L40 54" stroke-linecap="round"/>
+        </svg>
+        <span class="trust-label">정 직</span>
+      </div>
+      <div class="trust-item">
+        <svg class="trust-icon" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M20 18 L44 18 L54 30 L32 54 L10 30 Z" stroke-linejoin="round"/>
+          <path d="M10 30 L54 30" />
+          <path d="M20 18 L32 30 L44 18" stroke-linejoin="round"/>
+          <path d="M26 30 L32 54 L38 30" stroke-linejoin="round"/>
+        </svg>
+        <span class="trust-label">다양한 선택</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHY US ============ -->
+<section class="section section-soft" id="brand">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-eyebrow">Why Gwangseongdang</span>
+      <h2 class="section-title">왜 <span class="accent">광성당</span>인가</h2>
+      <div class="section-divider"></div>
+    </div>
+
+    <div class="why-grid">
+      <div class="why-card reveal">
+        <svg class="why-icon" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5">
+          <circle cx="32" cy="32" r="22"/>
+          <circle cx="32" cy="32" r="14" stroke-dasharray="2 3"/>
+          <text x="32" y="37" text-anchor="middle" font-family="serif" font-size="11" font-weight="700" fill="currentColor" stroke="none">50+</text>
+        </svg>
+        <h3>50년 이상의 역사</h3>
+        <p>SINCE 1969, 광주 송정동과 함께한<br/>전통 있는 광성당</p>
+      </div>
+      <div class="why-card reveal">
+        <svg class="why-icon" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M14 38 L22 32 L30 36 L40 30 L50 36" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M14 32 C 18 28, 22 28, 26 30 L 38 24 L 50 30" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <h3>믿음과 정직</h3>
+        <p>정직한 거래와<br/>신뢰를 최우선으로</p>
+      </div>
+      <div class="why-card reveal">
+        <svg class="why-icon" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M22 22 L42 22 L52 34 L32 54 L12 34 Z" stroke-linejoin="round"/>
+          <path d="M12 34 L52 34"/>
+          <path d="M22 22 L32 34 L42 22" stroke-linejoin="round"/>
+        </svg>
+        <h3>다양한 매물</h3>
+        <p>직접 보고 비교할 수 있는<br/>풍부한 상품</p>
+      </div>
+      <div class="why-card reveal">
+        <svg class="why-icon" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M14 50 L14 28 L24 20 L40 20 L50 28 L50 50 Z" stroke-linejoin="round"/>
+          <path d="M14 28 L50 28"/>
+          <rect x="24" y="36" width="6" height="14" />
+          <rect x="34" y="36" width="6" height="8" />
+          <path d="M20 12 L32 4 L44 12" stroke-linecap="round"/>
+        </svg>
+        <h3>원스톱 서비스</h3>
+        <p>금·은·시계·안경·보청기를<br/>한 곳에서</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVICES ============ -->
+<section class="section" id="services">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-eyebrow">Our Services</span>
+      <h2 class="section-title">광성당의 <span class="accent">주요 서비스</span></h2>
+      <div class="section-divider"></div>
+    </div>
+
+    <div class="services-grid">
+      <article class="service-card feature reveal" id="jewelry">
+        <div>
+          <svg class="feature-decor" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M22 22 L42 22 L52 34 L32 54 L12 34 Z" stroke-linejoin="round"/>
+            <path d="M12 34 L52 34"/>
+            <path d="M22 22 L32 34 L42 22" stroke-linejoin="round"/>
+            <path d="M28 34 L32 54 L36 34" stroke-linejoin="round"/>
+          </svg>
+          <h3>금제품 · 주얼리</h3>
+        </div>
+        <p>순금, 다이아몬드, 예물, 기념품 등<br/>다양한 디자인과 풍부한 재고를<br/>직접 비교하세요.</p>
+      </article>
+
+      <article class="service-card reveal" id="watch">
+        <div class="service-visual">
+          <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5">
+            <circle cx="32" cy="34" r="18"/>
+            <path d="M28 16 L36 16 L34 22 L30 22 Z" stroke-linejoin="round"/>
+            <path d="M28 52 L36 52 L34 46 L30 46 Z" stroke-linejoin="round"/>
+            <line x1="32" y1="34" x2="32" y2="24" stroke-linecap="round"/>
+            <line x1="32" y1="34" x2="40" y2="34" stroke-linecap="round"/>
+            <circle cx="32" cy="34" r="1.5" fill="currentColor"/>
+          </svg>
+        </div>
+        <div class="service-body">
+          <h3>고급 시계</h3>
+          <p>명품 브랜드부터<br/>최신 모델까지<br/>풍부한 선택</p>
+        </div>
+      </article>
+
+      <article class="service-card reveal" id="optics">
+        <div class="service-visual">
+          <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5">
+            <circle cx="18" cy="34" r="10"/>
+            <circle cx="46" cy="34" r="10"/>
+            <path d="M28 34 L36 34" stroke-linecap="round"/>
+            <path d="M8 30 L4 26" stroke-linecap="round"/>
+            <path d="M56 30 L60 26" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="service-body">
+          <h3>안 경</h3>
+          <p>프리미엄 안경테와<br/>정밀한 검안으로<br/>최적의 시야를 선사</p>
+        </div>
+      </article>
+
+      <article class="service-card reveal" id="hearing">
+        <div class="service-visual">
+          <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M28 14 C 18 14, 14 22, 14 32 C 14 42, 18 50, 26 52 C 32 54, 32 46, 32 40 C 32 34, 36 32, 38 28 C 40 22, 36 14, 28 14 Z" stroke-linejoin="round"/>
+            <path d="M40 24 C 44 26, 46 30, 46 34" stroke-linecap="round"/>
+            <path d="M44 20 C 50 22, 52 28, 52 34" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="service-body">
+          <h3>보청기</h3>
+          <p>전문 청력 상담과<br/>최신 보청기로<br/>편안한 듣는 경험</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOUNDERS ============ -->
+<section class="founders">
+  <div class="container">
+    <div class="founders-grid">
+      <div class="founders-text reveal">
+        <span class="section-eyebrow">Heritage of Trust</span>
+        <h2>규모가 다르고,<br/>선택의 폭이 <span class="em">다릅니다</span></h2>
+        <p>
+          넓고 쾌적한 매장에서 수많은 제품을 직접 비교하고,
+          오랜 경험을 가진 전문가의 상담으로 안심하고 선택하세요.
+          1969년부터 한결같이 고객님 한 분 한 분의 믿음과 성원 속에
+          광성당은 성장해 왔습니다.
+        </p>
+        <ul class="founders-features">
+          <li>
+            <span class="ff-num">01</span>
+            <strong>풍부한 재고</strong>
+            <p>다양한 상품을<br/>갖춘 대형 매장</p>
+          </li>
+          <li>
+            <span class="ff-num">02</span>
+            <strong>직접 비교</strong>
+            <p>여러 제품을<br/>한눈에 비교</p>
+          </li>
+          <li>
+            <span class="ff-num">03</span>
+            <strong>전문 상담</strong>
+            <p>경험 많은 전문가의<br/>맞춤 상담</p>
+          </li>
+        </ul>
+      </div>
+      <div class="founders-image-wrap reveal">
+        <div class="founders-image">
+          <img src="assets/founders.jpg" alt="광성당 창업자 부부 초상화" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ QUOTE ============ -->
+<section class="quote">
+  <div class="container">
+    <div class="reveal">
+      <div class="quote-mark">&ldquo;</div>
+      <blockquote>
+        오랜 시간 지켜온 신뢰,<br/>
+        <span class="em">광성당의 가장 큰 자산</span>입니다.
+      </blockquote>
+      <div class="quote-attribution">
+        SINCE 1969<br/>
+        앞으로도 정직한 마음과 품질로 변함없는 신뢰를 약속드리겠습니다
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ VISIT / FIND US ============ -->
+<section class="section section-soft" id="visit">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-eyebrow">Find Us</span>
+      <h2 class="section-title">오시는 <span class="accent">길</span></h2>
+      <div class="section-divider"></div>
+    </div>
+
+    <div class="visit-grid">
+      <div class="visit-copy reveal">
+        <p class="visit-lede">
+          광주송정역 인근, 송정동 중심 상권에 위치한 광성당은
+          지하철 1호선, KTX/SRT, 버스 및 자가용으로 편리하게 방문하실 수 있습니다.
+        </p>
+
+        <div class="visit-address">
+          <div class="va-label">Address</div>
+          <div class="va-value">광주광역시 광산구 송정동 821-7</div>
+          <div class="va-phone">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+            </svg>
+            <a href="tel:062-942-3456">062 - 942 - 3456</a>
+          </div>
+          <div class="va-hint">
+            내비게이션 이용 시 <strong>"광주광역시 광산구 송정동 821-7"</strong> 또는 <strong>"광성당"</strong>을 검색해 주세요. 송정동 중심 상권에 위치해 처음 방문하시는 분들도 찾기 쉽습니다.
+          </div>
+        </div>
+
+        <div class="visit-map-buttons">
+          <a href="https://map.naver.com/p/search/광주광역시%20광산구%20송정동%20821-7" target="_blank" rel="noopener" class="map-btn">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+              <circle cx="12" cy="10" r="3"/>
+            </svg>
+            네이버 지도
+          </a>
+          <a href="https://map.kakao.com/?q=광주광역시%20광산구%20송정동%20821-7" target="_blank" rel="noopener" class="map-btn">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+              <circle cx="12" cy="10" r="3"/>
+            </svg>
+            카카오맵
+          </a>
+        </div>
+      </div>
+
+      <div class="visit-features reveal">
+        <div class="vf-item">
+          <div class="vf-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <rect x="5" y="3" width="14" height="16" rx="3"/>
+              <path d="M5 13h14"/>
+              <circle cx="8.5" cy="16.5" r="1" fill="currentColor"/>
+              <circle cx="15.5" cy="16.5" r="1" fill="currentColor"/>
+              <path d="M8 19l-2 2M16 19l2 2" stroke-linecap="round"/>
+              <path d="M9 7h6" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div class="vf-text">
+            <strong>지하철</strong>
+            <p>광주도시철도 1호선<br/>광주송정역 하차 후 도보 또는 택시</p>
+          </div>
+        </div>
+
+        <div class="vf-item">
+          <div class="vf-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M3 12c0-4 4-7 9-7s9 3 9 7v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+              <path d="M3 12h18" stroke-linecap="round"/>
+              <circle cx="7.5" cy="15.5" r="1" fill="currentColor"/>
+              <circle cx="16.5" cy="15.5" r="1" fill="currentColor"/>
+              <path d="M7 19l-2 2M17 19l2 2" stroke-linecap="round"/>
+              <path d="M9 9h6" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div class="vf-text">
+            <strong>KTX / SRT</strong>
+            <p>광주송정역에서 가까운 거리<br/>도보 또는 택시로 편리하게 방문</p>
+          </div>
+        </div>
+
+        <div class="vf-item">
+          <div class="vf-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M5 17h14M6 17v-5l2-5h8l2 5v5" stroke-linejoin="round"/>
+              <circle cx="8" cy="17" r="2"/>
+              <circle cx="16" cy="17" r="2"/>
+              <path d="M3 12h2M19 12h2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div class="vf-text">
+            <strong>자가용</strong>
+            <p>송정동 중심 상권 위치<br/>찾기 쉬운 매장 접근성</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA BANNER ============ -->
+<section class="cta-banner" id="consult">
+  <div class="container">
+    <h2>직접 방문하여 비교해 보세요</h2>
+    <p>매장 방문 상담이나 제품 문의는 아래 연락처로 편하게 연락 주십시오.</p>
+    <a href="tel:062-942-3456" class="btn btn-primary">062 - 942 - 3456 <span class="btn-arrow"></span></a>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-lockup">
+          <img src="assets/logo-mark.png" alt="" class="footer-logo-mark" />
+          <div class="footer-wordmark">광 성 당</div>
+          <div class="footer-tagline">— SINCE 1969 —</div>
+        </div>
+        <p class="brand-concept">빛을 완성하는 집, 광성당.<br/>1969년부터 이어온 신뢰와 기술로,<br/>당신의 가장 빛나는 순간을 완성합니다.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>바로가기</h4>
+        <ul>
+          <li><a href="#jewelry">금제품 · 주얼리</a></li>
+          <li><a href="#watch">고급 시계</a></li>
+          <li><a href="#optics">안경</a></li>
+          <li><a href="#hearing">보청기</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>브랜드</h4>
+        <ul>
+          <li><a href="#brand">브랜드 소개</a></li>
+          <li><a href="#visit">오시는 길</a></li>
+          <li><a href="#consult">상담 문의</a></li>
+          <li><a href="ksdgold.com">ksdgold.com</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-contact">
+        <h4>오시는 길 · 문의</h4>
+        <div class="contact-row">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+          </svg>
+          <span>062-942-3456</span>
+        </div>
+        <div class="contact-row">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+            <circle cx="12" cy="10" r="3"/>
+          </svg>
+          <span>광주광역시 광산구 송정동 821-7</span>
+        </div>
+        <div class="contact-row">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"/>
+            <polyline points="12 6 12 12 16 14"/>
+          </svg>
+          <span>평일 09:30 - 19:00<br/>일요일 10:30 - 18:30</span>
+        </div>
+        <div class="map-block">
+          <div class="mb-title">편리한 위치</div>
+          <ul>
+            <li>광주송정역 인근</li>
+            <li>지하철 1호선 · KTX/SRT 접근 편리</li>
+            <li>송정동 중심 상권 위치</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div>© 2026 광성당 (KSD Gold). All rights reserved.</div>
+      <div class="footer-bottom-links">
+        <a href="#">개인정보처리방침</a>
+        <a href="#">이용약관</a>
+        <a href="#">고객센터</a>
+        <a href="#">사이트맵</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Scroll reveal
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((e) => {
+      if (e.isIntersecting) {
+        e.target.classList.add('in');
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
+
+  // Stagger reveal children for trust strip / cards
+  document.querySelectorAll('.trust-strip, .why-grid, .services-grid, .founders-features').forEach((parent) => {
+    [...parent.children].forEach((child, i) => {
+      child.style.transitionDelay = (i * 90) + 'ms';
+    });
+  });
+
+  // Smooth header dimming on scroll
+  const nav = document.querySelector('.nav');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 20) nav.style.boxShadow = '0 1px 0 rgba(60,40,10,0.05)';
+    else nav.style.boxShadow = 'none';
+  });
+</script>
+
+</body>
+</html>
