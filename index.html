@@ -185,37 +185,28 @@
   .ticker-quotes {
     display: flex;
     align-items: center;
-    gap: 28px;
+    gap: 10px;
     flex-wrap: wrap;
+    min-width: 0;
   }
-  .ticker-item .label {
-    color: var(--gold);
-    font-weight: 600;
-  }
-  .ticker-item .price {
-    color: var(--ink);
-    font-weight: 500;
-  }
-  .ticker-change {
-    font-size: 12px;
-    font-weight: 500;
-    margin-left: 6px;
-  }
-  .ticker-change.up { color: #b83a3a; }
-  .ticker-change.down { color: #2e6db4; }
-  .ticker-change.flat { color: var(--ink-muted); }
-  .ticker-divider {
-    width: 1px;
-    height: 12px;
-    background: var(--line);
+  .ticker-dot {
+    color: #3a9d5c;
+    font-size: 10px;
+    line-height: 1;
     flex-shrink: 0;
   }
-  .ticker-time {
+  .ticker-sep {
+    color: var(--line);
+    margin: 0 4px;
+    font-weight: 300;
+  }
+  .ticker-meta {
     font-size: 11px;
     color: var(--ink-muted);
     letter-spacing: 0.04em;
     white-space: nowrap;
     flex-shrink: 0;
+    margin-left: auto;
   }
 
   /* ============ HERO ============ */
@@ -1089,10 +1080,9 @@
   @media (max-width: 560px) {
     .container { padding: 0 22px; }
     .nav-inner { padding: 14px 22px; }
-    .ticker-inner { padding: 8px 22px; gap: 10px; }
-    .ticker-quotes { gap: 14px; font-size: 12px; }
-    .ticker-divider { display: none; }
-    .ticker-time { font-size: 10px; }
+    .ticker-inner { padding: 8px 22px; gap: 10px; flex-wrap: wrap; }
+    .ticker-quotes { gap: 6px; font-size: 12px; }
+    .ticker-meta { font-size: 10px; white-space: normal; text-align: right; }
     .logo { font-size: 22px; }
     .hero { padding: 40px 0 60px; }
     .hero-ctas .btn { padding: 12px 20px; font-size: 14px; }
@@ -1132,12 +1122,8 @@
 <!-- ============ PRICE TICKER ============ -->
 <div id="ticker" hidden>
   <div class="ticker-inner">
-    <div class="ticker-quotes">
-      <span class="ticker-item" id="ticker-gold"></span>
-      <span class="ticker-divider" aria-hidden="true"></span>
-      <span class="ticker-item" id="ticker-silver"></span>
-    </div>
-    <time class="ticker-time" id="ticker-time"></time>
+    <p class="ticker-quotes" id="ticker-quotes"></p>
+    <p class="ticker-meta" id="ticker-meta"></p>
   </div>
 </div>
 
@@ -1619,23 +1605,30 @@
   // Gold / silver price ticker
   (function initTicker() {
     const ticker = document.getElementById('ticker');
-    const goldEl = document.getElementById('ticker-gold');
-    const silverEl = document.getElementById('ticker-silver');
-    const timeEl = document.getElementById('ticker-time');
-    if (!ticker || !goldEl || !silverEl || !timeEl) return;
+    const quotesEl = document.getElementById('ticker-quotes');
+    const metaEl = document.getElementById('ticker-meta');
+    if (!ticker || !quotesEl || !metaEl) return;
 
-    function formatQuote(label, quote) {
-      const rate = quote.changeRate;
-      const dir = rate > 0 ? 'up' : rate < 0 ? 'down' : 'flat';
-      const arrow = dir === 'up' ? '▲' : dir === 'down' ? '▼' : '━';
-      const price = quote.perDon.toLocaleString('ko-KR');
-      const pct = Math.abs(rate).toFixed(2);
+    function formatGramPrice(perGram) {
+      return '₩' + Math.round(perGram).toLocaleString('ko-KR') + '/g';
+    }
 
-      return (
-        '<span class="label">' + label + '</span> ' +
-        '<span class="price">1돈 ₩' + price + '</span>' +
-        '<span class="ticker-change ' + dir + '">' + arrow + ' ' + pct + '%</span>'
-      );
+    function formatTickerDateTime(iso) {
+      const parts = new Intl.DateTimeFormat('ko-KR', {
+        timeZone: 'Asia/Seoul',
+        month: 'numeric',
+        day: 'numeric',
+        hour: '2-digit',
+        minute: '2-digit',
+        hour12: true,
+      }).formatToParts(new Date(iso));
+
+      const get = function (type) {
+        const part = parts.find(function (p) { return p.type === type; });
+        return part ? part.value : '';
+      };
+
+      return get('month') + '. ' + get('day') + '. ' + get('dayPeriod') + ' ' + get('hour') + ':' + get('minute');
     }
 
     fetch('/api/gold-price')
@@ -1646,17 +1639,19 @@
       .then(function (data) {
         if (!data.gold || !data.silver) throw new Error('invalid payload');
 
-        goldEl.innerHTML = formatQuote('순금', data.gold);
-        silverEl.innerHTML = formatQuote('은', data.silver);
+        var html = '<span class="ticker-dot" aria-hidden="true">●</span> ';
+        html += 'KRX 순금 ' + formatGramPrice(data.gold.perGram);
+        html += '<span class="ticker-sep">|</span> 은 ' + formatGramPrice(data.silver.perGram);
+        if (data.usdKrw) {
+          html += '<span class="ticker-sep">|</span> 원/달러 $1 = ₩' + Math.round(data.usdKrw).toLocaleString('ko-KR');
+        }
+        quotesEl.innerHTML = html;
 
-        const updated = new Date(data.updatedAt);
-        timeEl.dateTime = data.updatedAt;
-        timeEl.textContent = updated.toLocaleTimeString('ko-KR', {
-          timeZone: 'Asia/Seoul',
-          hour: '2-digit',
-          minute: '2-digit',
-          hour12: false,
-        });
+        var meta = '실시간 갱신 ' + formatTickerDateTime(data.updatedAt);
+        if (data.marketDate) {
+          meta += ' · KRX ' + data.marketDate;
+        }
+        metaEl.textContent = meta;
 
         ticker.hidden = false;
       })
