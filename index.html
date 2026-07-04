@@ -163,6 +163,61 @@
   .hamburger { display: none; background: none; border: 0; cursor: pointer; padding: 8px; }
   .hamburger span { display: block; width: 22px; height: 1.5px; background: var(--ink); margin: 5px 0; transition: 0.3s; }
 
+  /* ============ PRICE TICKER ============ */
+  #ticker {
+    background: var(--paper);
+    border-bottom: 1px solid var(--line-soft);
+    font-family: var(--font-serif);
+    font-size: 13px;
+    letter-spacing: 0.03em;
+    color: var(--ink-soft);
+  }
+  #ticker[hidden] { display: none; }
+  .ticker-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 9px 32px;
+  }
+  .ticker-quotes {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    flex-wrap: wrap;
+  }
+  .ticker-item .label {
+    color: var(--gold);
+    font-weight: 600;
+  }
+  .ticker-item .price {
+    color: var(--ink);
+    font-weight: 500;
+  }
+  .ticker-change {
+    font-size: 12px;
+    font-weight: 500;
+    margin-left: 6px;
+  }
+  .ticker-change.up { color: #b83a3a; }
+  .ticker-change.down { color: #2e6db4; }
+  .ticker-change.flat { color: var(--ink-muted); }
+  .ticker-divider {
+    width: 1px;
+    height: 12px;
+    background: var(--line);
+    flex-shrink: 0;
+  }
+  .ticker-time {
+    font-size: 11px;
+    color: var(--ink-muted);
+    letter-spacing: 0.04em;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
   /* ============ HERO ============ */
   .hero {
     padding: 64px 0 80px;
@@ -1034,6 +1089,10 @@
   @media (max-width: 560px) {
     .container { padding: 0 22px; }
     .nav-inner { padding: 14px 22px; }
+    .ticker-inner { padding: 8px 22px; gap: 10px; }
+    .ticker-quotes { gap: 14px; font-size: 12px; }
+    .ticker-divider { display: none; }
+    .ticker-time { font-size: 10px; }
     .logo { font-size: 22px; }
     .hero { padding: 40px 0 60px; }
     .hero-ctas .btn { padding: 12px 20px; font-size: 14px; }
@@ -1069,6 +1128,18 @@
     <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
   </div>
 </nav>
+
+<!-- ============ PRICE TICKER ============ -->
+<div id="ticker" hidden>
+  <div class="ticker-inner">
+    <div class="ticker-quotes">
+      <span class="ticker-item" id="ticker-gold"></span>
+      <span class="ticker-divider" aria-hidden="true"></span>
+      <span class="ticker-item" id="ticker-silver"></span>
+    </div>
+    <time class="ticker-time" id="ticker-time"></time>
+  </div>
+</div>
 
 <!-- ============ HERO ============ -->
 <section class="hero">
@@ -1544,6 +1615,55 @@
     if (window.scrollY > 20) nav.style.boxShadow = '0 1px 0 rgba(60,40,10,0.05)';
     else nav.style.boxShadow = 'none';
   });
+
+  // Gold / silver price ticker
+  (function initTicker() {
+    const ticker = document.getElementById('ticker');
+    const goldEl = document.getElementById('ticker-gold');
+    const silverEl = document.getElementById('ticker-silver');
+    const timeEl = document.getElementById('ticker-time');
+    if (!ticker || !goldEl || !silverEl || !timeEl) return;
+
+    function formatQuote(label, quote) {
+      const rate = quote.changeRate;
+      const dir = rate > 0 ? 'up' : rate < 0 ? 'down' : 'flat';
+      const arrow = dir === 'up' ? '▲' : dir === 'down' ? '▼' : '━';
+      const price = quote.perDon.toLocaleString('ko-KR');
+      const pct = Math.abs(rate).toFixed(2);
+
+      return (
+        '<span class="label">' + label + '</span> ' +
+        '<span class="price">1돈 ₩' + price + '</span>' +
+        '<span class="ticker-change ' + dir + '">' + arrow + ' ' + pct + '%</span>'
+      );
+    }
+
+    fetch('/api/gold-price')
+      .then(function (res) {
+        if (!res.ok) throw new Error('fetch failed');
+        return res.json();
+      })
+      .then(function (data) {
+        if (!data.gold || !data.silver) throw new Error('invalid payload');
+
+        goldEl.innerHTML = formatQuote('순금', data.gold);
+        silverEl.innerHTML = formatQuote('은', data.silver);
+
+        const updated = new Date(data.updatedAt);
+        timeEl.dateTime = data.updatedAt;
+        timeEl.textContent = updated.toLocaleTimeString('ko-KR', {
+          timeZone: 'Asia/Seoul',
+          hour: '2-digit',
+          minute: '2-digit',
+          hour12: false,
+        });
+
+        ticker.hidden = false;
+      })
+      .catch(function () {
+        /* hide silently on failure */
+      });
+  })();
 </script>
 
 </body>
